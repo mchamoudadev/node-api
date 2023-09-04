@@ -1,6 +1,6 @@
 import express from 'express';
 import { loginUser, registerUser } from '../controllers/userController.js';
-import { validateUserRegistration } from '../validators/userValidator.js';
+import { validateUserLogin, validateUserRegistration } from '../validators/userValidator.js';
 
 const usersRouter = express.Router();
 
@@ -8,6 +8,6 @@ const usersRouter = express.Router();
 // usersRouter.route('/')
 
 usersRouter.post('/register-user', validateUserRegistration, registerUser);
-usersRouter.post('/login', loginUser);
+usersRouter.post('/login-user', validateUserLogin, loginUser);
 
 export default usersRouter;
