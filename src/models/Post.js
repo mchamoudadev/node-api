@@ -2,6 +2,13 @@ import mongoose from "mongoose";
 
 const { ObjectId } = mongoose.Schema.Types;
 
+// comment
+// reply
+// likes
+// heart , angry, sad, 
+// shares
+
+
 const postSchema = new mongoose.Schema(
     {
         title: {

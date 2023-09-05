@@ -52,7 +52,6 @@ export const registerUser = async (req, res) => {
         res.status(500).send({ status: false, message: "unknown error" });
     }
 
-
 };
 
 export const loginUser = async (req, res) => {
@@ -102,6 +101,4 @@ export const loginUser = async (req, res) => {
     } catch (err) {
         console.log("error at login", err);
     }
-
-
 };
